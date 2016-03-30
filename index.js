@@ -10,17 +10,20 @@ app.use(express.static(__dirname + '/'));
 
 app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname+'/index.html'));
-	// var pyshell = new PythonShell('HW.py', {
- //        mode: 'text'
- //    });
- //    var count = 0;
- //    pyshell.send('b');
- //    pyshell.on('message', function (message) {
- //    	console.log(message);
- //    	response.writeHead(200, {'Content-Type': 'text/plain'});
- //        response.end(String(message)+'\n');
- //    }).on('close', function () {
- //    }).end();
+});
+
+app.get('/python', function(request, response) {
+	var pyshell = new PythonShell('HW.py', {
+        mode: 'text'
+    });
+    var count = 0;
+    pyshell.send('b');
+    pyshell.on('message', function (message) {
+    	console.log(message);
+    	response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.end(String(message)+'\n');
+    }).on('close', function () {
+    }).end();
 });
 
 app.listen(app.get('port'), function() {
