@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The First Function</title>
+	<link rel="stylesheet" href="css/style-function.css">
+	<link rel="stylesheet" href="css/forms-min.css">
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Advent+Pro:400,200' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/velocity.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/jquery.radios-to-slider.js"></script>
+    <script type="text/javascript" src="js/function3.js"></script>
+<body>
+	<div id='nav'>
+		<a href="function2.html">Function 2</a>
+		<a href="function1.html">Function 1</a>
+		<a href="index.html">Home</a>
+	</div>
+	<div id='page'>
+		<h1 id='title'>Prediction</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<div id='content-block'>
+			<form id="form" class="pure-form pure-form-aligned">
+			    <fieldset>
+			        <div class="pure-control-group">
+			        	<label for="state">State</label>
+				        <select id="state">
+				            <option value="1">Alabama</option>
+							<option value="2">Alaska</option>
+							<option value="4">Arizona</option>
+							<option value="5">Arkansas</option>
+							<option value="6">California</option>
+							<option value="8">Colorado</option>
+							<option value="9">Connecticut</option>
+							<option value="10">Delaware</option>
+							<option value="11">District of Columbia</option>
+							<option value="12">Florida</option>
+							<option value="13">Georgia</option>
+							<option value="15">Hawaii</option>
+							<option value="16">Idaho</option>
+							<option value="17">Illinois</option>
+							<option value="18">Indiana</option>
+							<option value="19">Iowa</option>
+							<option value="20">Kansas</option>
+							<option value="21">Kentucky</option>
+							<option value="22">Louisiana</option>
+							<option value="23">Maine</option>
+							<option value="24">Maryland</option>
+							<option value="25">Massachusetts</option>
+							<option value="26">Michigan</option>
+							<option value="27">Minnesota</option>
+							<option value="28">Mississippi</option>
+							<option value="29">Missouri</option>
+							<option value="30">Montana</option>
+							<option value="31">Nebraska</option>
+							<option value="32">Nevada</option>
+							<option value="33">New Hampshire</option>
+							<option value="34">New Jersey</option>
+							<option value="35">New Mexico</option>
+							<option value="36">New York</option>
+							<option value="37">North Carolina</option>
+							<option value="38">North Dakota</option>
+							<option value="39">Ohio</option>
+							<option value="40">Oklahoma</option>
+							<option value="41">Oregon</option>
+							<option value="42">Pennsylvania</option>
+							<option value="44">Rhode Island</option>
+							<option value="45">South Carolina</option>
+							<option value="46">South Dakota</option>
+							<option value="47">Tennessee</option>
+							<option value="48">Texas</option>
+							<option value="49">Utah</option>
+							<option value="50">Vermont</option>
+							<option value="51">Virginia</option>
+							<option value="53">Washington</option>
+							<option value="54">West Virginia</option>
+							<option value="55">Wisconsin</option>
+							<option value="56">Wyoming</option>
+				        </select>
+			        </div>
+			        <div class="pure-control-group">
+			        	<label for="education">Education</label>
+				        <select id="education">
+				            <option value="1">No schooling completed</option>
+							<option value="2">Nursery school, preschool</option>
+							<option value="3">Kindergarten</option>
+							<option value="4">Grade 1</option>
+							<option value="5">Grade 2</option>
+							<option value="6">Grade 3</option>
+							<option value="7">Grade 4</option>
+							<option value="8">Grade 5</option>
+							<option value="9">Grade 6</option>
+							<option value="10">Grade 7</option>
+							<option value="11">Grade 8</option>
+							<option value="12">Grade 9</option>
+							<option value="13">Grade 10</option>
+							<option value="14">Grade 11</option>
+							<option value="15">12th grade - no diploma</option>
+							<option value="16">Regular high school diploma</option>
+							<option value="17">GED or alternative credential</option>
+							<option value="18">Some college, but less than 1 year</option>
+							<option value="19">1 or more years of college credit, no degree</option>
+							<option value="20">Associate's degree</option>
+							<option value="21">Bachelor's degree</option>
+							<option value="22">Master's degree</option>
+							<option value="23">Professional degree beyond a bachelor's degree</option>
+							<option value="24">Doctorate degree</option>
+				        </select>
+			        </div>
+			        <div class="pure-control-group">
+			            <label for="age">Age</label>
+			            <input id="age" type="number" value="25">
+			        </div>
+			        <div class="pure-control-group">
+			        	<label for="employment">Employment Status Recode</label>
+				        <select id="employment">
+				            <option value="1">Civilian employed, at work</option>
+							<option value="2">Civilian employed, with a job but not at work</option>
+							<option value="3">Unemployed</option>
+							<option value="4">Armed forces, at work</option>
+							<option value="5">Armed forces, with a job but not at work</option>
+							<option value="6">Not in labor force</option>
+				        </select>
+			        </div>
+			        <div class="pure-control-group">
+			        	<label for="sex">Gender</label>
+				        <select id="sex">
+				            <option value="1">Male</option>
+							<option value="2">Female</option>
+				        </select>
+			        </div>
+			        <div class="pure-control-group">
+			        	<label for="nativity">Nativity</label>
+				        <select id="nativity">
+				            <option value="1">Native</option>
+							<option value="2">Foreign born</option>
+				        </select>
+			        </div>
+			        <div class="pure-controls">
+			            <button class="pure-button pure-button-primary">Submit</button>
+			        </div>
+			    </fieldset>
+			</form>
+			<p id='prediction'></p>
+		</div>
+		<div id='footer'>Lorem ipsum dolor sit amet</div>
+	</div>
+</body>
+</html>
