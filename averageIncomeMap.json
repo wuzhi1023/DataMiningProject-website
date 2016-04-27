@@ -5,7 +5,7 @@
          "type":"string"
       },
       {
-         "label":"Unemployment Rate",
+         "label":"Average Rate",
          "type":"number"
       }
    ],
