@@ -21,7 +21,8 @@ $(function() {
     query = '['+state+','+education+','+age+','+employment+','+sex+','+nativity+']';
     console.log(query);
     $.getJSON('/prediction?'+query, function (data) {
-      $("#prediction").text("We think you might have a "+predictions[data]+" income.");
+      console.log(data-1);
+      $("#prediction").text("We think you might have a "+predictions[data-1]+" income.");
     });
   });
 });
