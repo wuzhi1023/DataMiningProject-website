@@ -1,5 +1,10 @@
 * {
 	margin: 0 0 0 0;
+	font-family: 'Advent Pro', sans-serif;
+	text-decoration: none;
+}
+a {
+	color: black;
 }
 body {
 	background-color: #FEFEFE;
@@ -52,9 +57,17 @@ body {
 	padding-bottom: 300px;
 }
 .function-block {
+	text-align: center;
 	display: inline-block;
 	width: 22%;
 	margin-right: 3%;
+	-webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.function-block:hover {
+	opacity: 0.7;
+	-webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 img {
 	width: 100%;
@@ -69,4 +82,5 @@ img {
 	text-align: right;
 	padding-top: 20px;
 	margin-bottom: 20px;
+	right: 20px;
 }
