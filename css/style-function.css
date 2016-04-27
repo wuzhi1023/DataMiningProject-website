@@ -62,10 +62,11 @@ body {
 	margin-right: auto;	
 }
 #footer {
-	bottom: 0;
+	position: absolute;
+	bottom: -300px;
 	width: 100%;
 	text-align: right;
-	margin-top: 15em;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
+	right: 20px;
 }
