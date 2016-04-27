@@ -6,15 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The First Function</title>
 	<link rel="stylesheet" href="css/style-function.css">
-	<link rel="stylesheet" href="css/forms-min.css">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Advent+Pro:400,200' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/velocity.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="js/jquery.radios-to-slider.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/function3.js"></script>
 <body>
 	<div id='nav'>
@@ -26,12 +26,11 @@
 		<h1 id='title'>Prediction</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		<div id='content-block'>
-			<form id="form" class="pure-form pure-form-aligned">
-			    <fieldset>
-			        <div class="pure-control-group">
-			        	<label for="state">State</label>
+			<form class="col s12">
+				<div class="row">
+			        <div class="input-field col s6">
 				        <select id="state">
-				            <option value="1">Alabama</option>
+				            <option value="1" selected>Alabama</option>
 							<option value="2">Alaska</option>
 							<option value="4">Arizona</option>
 							<option value="5">Arkansas</option>
@@ -83,11 +82,11 @@
 							<option value="55">Wisconsin</option>
 							<option value="56">Wyoming</option>
 				        </select>
+				        <label>State</label>
 			        </div>
-			        <div class="pure-control-group">
-			        	<label for="education">Education</label>
+			        <div class="input-field col s6">
 				        <select id="education">
-				            <option value="1">No schooling completed</option>
+				            <option value="1" selected>No schooling completed</option>
 							<option value="2">Nursery school, preschool</option>
 							<option value="3">Kindergarten</option>
 							<option value="4">Grade 1</option>
@@ -112,42 +111,55 @@
 							<option value="23">Professional degree beyond a bachelor's degree</option>
 							<option value="24">Doctorate degree</option>
 				        </select>
+				        <label for="education">Education</label>
 			        </div>
-			        <div class="pure-control-group">
+			    </div>
+			    <div class="row">
+			        <div class="input-field col s6">
 			            <label for="age">Age</label>
-			            <input id="age" type="number" value="25">
+			            <input id="age" type="number" placeholder="25">
 			        </div>
-			        <div class="pure-control-group">
-			        	<label for="employment">Employment Status Recode</label>
+			        <div class="input-field col s6">
 				        <select id="employment">
-				            <option value="1">Civilian employed, at work</option>
+				            <option value="1" selected>Civilian employed, at work</option>
 							<option value="2">Civilian employed, with a job but not at work</option>
 							<option value="3">Unemployed</option>
 							<option value="4">Armed forces, at work</option>
 							<option value="5">Armed forces, with a job but not at work</option>
 							<option value="6">Not in labor force</option>
 				        </select>
+				        <label for="employment">Employment Status Recode</label>
 			        </div>
-			        <div class="pure-control-group">
-			        	<label for="sex">Gender</label>
+			    </div>
+			    <div class="row">
+			        <div class="input-field col s6">
 				        <select id="sex">
-				            <option value="1">Male</option>
+				            <option value="1" selected>Male</option>
 							<option value="2">Female</option>
 				        </select>
+				        <label for="sex">Gender</label>
 			        </div>
-			        <div class="pure-control-group">
-			        	<label for="nativity">Nativity</label>
+			        <div class="input-field col s6">
 				        <select id="nativity">
-				            <option value="1">Native</option>
+				            <option value="1" selected>Native</option>
 							<option value="2">Foreign born</option>
 				        </select>
+				        <label for="nativity">Nativity</label>
 			        </div>
-			        <div class="pure-controls">
-			            <button class="pure-button pure-button-primary">Submit</button>
+			    </div>
+			    <div class="row">
+			        <div class="input-field col s3">
+			            <a id="button" class="waves-effect waves-light btn">Predict</a>
 			        </div>
-			    </fieldset>
+			        <div class="col s9 m9">
+						<div id="result" class="card blue-grey darken-1" style="opacity: 0;">
+							<div class="card-content white-text">
+								We think you might have a <b id='prediction'></b> income.
+							</div>
+						</div>
+					</div>
+			    </div>
 			</form>
-			<p id='prediction'></p>
 		</div>
 		<div id='footer'>Lorem ipsum dolor sit amet</div>
 	</div>

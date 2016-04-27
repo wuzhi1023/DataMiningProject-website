@@ -3,7 +3,13 @@ $(function() {
   state2 = [39, 22, 50, 55, 31, 20, 37, 42, 2, 41, 4, 49, 12, 32, 13, 56, 27];
   state3 = [38, 48, 15, 10, 44, 17, 33, 53, 8, 36, 6, 51, 25, 24, 34, 9, 11];
   predictions = ['low', 'middle', 'high']
-  $('button').click(function(event) {
+  $('.input-field').change(function() {
+    $("#result").velocity({ opacity: 0 });
+  });
+  $('.input-field').click(function() {
+    $("#result").velocity({ opacity: 0 });
+  });
+  $('#button').click(function(event) {
     event.preventDefault();
     state = parseInt(document.getElementById('state').value);
     // console.log(state);
@@ -12,6 +18,7 @@ $(function() {
     else if (state3.includes(state)) state = 3;
     education = document.getElementById('education').value;
     age = parseInt(document.getElementById('age').value);
+    if(!age) age=25;
     employment = document.getElementById('employment').value;
     sex = document.getElementById('sex').value;
     nativity = document.getElementById('nativity').value;
@@ -22,7 +29,11 @@ $(function() {
     console.log(query);
     $.getJSON('/prediction?'+query, function (data) {
       console.log(data-1);
-      $("#prediction").text("We think you might have a "+predictions[data-1]+" income.");
+      $("#prediction").text(predictions[data-1]);
+      $("#result").velocity({ opacity: 1 });
     });
   });
+});
+$(document).ready(function() {
+  $('select').material_select();
 });
