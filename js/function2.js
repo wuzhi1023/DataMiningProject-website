@@ -7,11 +7,20 @@ $(function() {
 
   $('#option1').click(function() {
     $.getJSON('averageIncomeMap.json', function (data) {
-      console.log(data);
+      drawJSON(data);
+    });
+  });
+  $('ins[data-radio="option1"]').click(function() {
+    $.getJSON('averageIncomeMap.json', function (data) {
       drawJSON(data);
     });
   });
   $('#option2').click(function() {
+    $.getJSON('medianIncomeMap.json', function (data) {
+      drawJSON(data);
+    });
+  });
+  $('ins[data-radio="option2"]').click(function() {
     $.getJSON('medianIncomeMap.json', function (data) {
       drawJSON(data);
     });
@@ -21,7 +30,17 @@ $(function() {
       drawJSON(data);
     });
   });
+  $('ins[data-radio="option3"]').click(function() {
+    $.getJSON('richpeoplePercentageMap.json', function (data) {
+      drawJSON(data);
+    });
+  });
   $('#option4').click(function() {
+    $.getJSON('UnemploymentMap.json', function (data) {
+      drawJSON(data);
+    });
+  });
+  $('ins[data-radio="option4"]').click(function() {
     $.getJSON('UnemploymentMap.json', function (data) {
       drawJSON(data);
     });
