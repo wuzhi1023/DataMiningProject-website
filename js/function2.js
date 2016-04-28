@@ -36,22 +36,22 @@ $(function() {
     });
   });
   $('#option4').click(function() {
-    $.getJSON('UnemploymentMap.json', function (data) {
+    $.getJSON('gini.json', function (data) {
       drawJSON(data);
     });
   });
   $('ins[data-radio="option4"]').click(function() {
-    $.getJSON('UnemploymentMap.json', function (data) {
+    $.getJSON('gini.json', function (data) {
       drawJSON(data);
     });
   });
   $('#option5').click(function() {
-    $.getJSON('gini.json', function (data) {
+    $.getJSON('UnemploymentMap.json', function (data) {
       drawJSON(data);
     });
   });
   $('ins[data-radio="option5"]').click(function() {
-    $.getJSON('gini.json', function (data) {
+    $.getJSON('UnemploymentMap.json', function (data) {
       drawJSON(data);
     });
   });
