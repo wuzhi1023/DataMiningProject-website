@@ -148,18 +148,50 @@
 			        </div>
 			    </div>
 			    <div class="row">
+			        <div class="input-field col s6">
+				        <select id="occupation">
+				            <option value="0" selected>Management</option>
+							<option value="1">Business</option>
+							<option value="2">IT</option>
+							<option value="3">Engineering</option>
+							<option value="4">Science</option>
+							<option value="5">Community and Social Service</option>
+							<option value="6">Legal</option>
+							<option value="7">Education</option>
+							<option value="8">Arts and Sports</option>
+							<option value="9">Healthcare</option>
+							<option value="10">Healthcare Support</option>
+							<option value="11">Protective Service</option>
+							<option value="12">Food</option>
+							<option value="13">Building Cleaning</option>
+							<option value="14">Personal Care</option>
+							<option value="15">Sales</option>
+							<option value="16">Office and Administrative Support</option>
+							<option value="17">Farming, Fishing</option>
+							<option value="18">Construction and Extraction</option>
+							<option value="19">Installation, Maintenance, and Repair</option>
+							<option value="20">Production</option>
+							<option value="21">Transportation</option>
+							<option value="22">Material Moving</option>
+							<option value="23">Military</option>
+				        </select>
+				        <label for="occupation">Occupation</label>
+			        </div>
+			    </div>
+			    <div class="row">
 			        <div class="input-field col s3">
 			            <a id="button" class="waves-effect waves-light btn">Predict</a>
 			        </div>
 			        <div class="col s9 m9">
 						<div id="result" class="card blue-grey darken-1" style="opacity: 0;">
 							<div class="card-content white-text">
-								We think you might have a <b id='prediction'></b> income.
+								We think you might have a annual income of <b id='prediction'></b>.
 							</div>
 						</div>
 					</div>
 			    </div>
 			</form>
+			<div id="regions_div" style="width: 900px; height: 500px; opacity: 0;"></div>
 		</div>
 		<div id='footer'>Peizhe Cao, Zhihao Wu, Yun Zhou</div>
 	</div>

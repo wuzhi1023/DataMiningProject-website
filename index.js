@@ -28,6 +28,22 @@ app.get('/prediction?', function(request, response) {
     }).end();
 });
 
+app.get('/statesprediction?', function(request, response) {
+    var query = request._parsedUrl.query;
+    // console.log(query);
+    var pyshell = new PythonShell('states.py', {
+        mode: 'text'
+    });
+    var count = 0;
+    pyshell.send(query);
+    pyshell.on('message', function (message) {
+        console.log(message);
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.end(String(message)+'\n');
+    }).on('close', function () {
+    }).end();
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
