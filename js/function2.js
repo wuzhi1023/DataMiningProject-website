@@ -45,6 +45,16 @@ $(function() {
       drawJSON(data);
     });
   });
+  $('#option5').click(function() {
+    $.getJSON('gini.json', function (data) {
+      drawJSON(data);
+    });
+  });
+  $('ins[data-radio="option5"]').click(function() {
+    $.getJSON('gini.json', function (data) {
+      drawJSON(data);
+    });
+  });
   function drawRegionsMap() {
     chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
     $.getJSON('averageIncomeMap.json', function (data) {
